@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config version="1.0">
+    <Variable Name="Split" Value="-" />
+    <Variable Name="Split_Position" Value="3" />
+    <Bronze>
+      <Name>B</Name>
+      <Value>250</Value>
+    </Bronze>
+    <Silver>
+      <Name>S</Name>
+      <Value>1000</Value>
+    </Silver>
+    <Gold>
+      <Name>G</Name>
+      <Value>-1</Value>
+    </Gold>
+</Config>
