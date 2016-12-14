@@ -109,3 +109,10 @@ Process {
 
 	}
 }
+
+
+# Thanks to Luc's article: http://www.lucd.info/viproperties/
+# Usage: Get-VM -Name TST* | select Name, CBTEnabled
+
+#Requires -Modules VMware.VimAutomation.Core, @{ModuleName="VMware.VimAutomation.Core";ModuleVersion="6.3.0.0"}
+New-VIProperty -Name CBTEnabled -ObjectType VirtualMachine -ValueFromExtensionProperty "Config.ChangeTrackingEnabled" -Force
