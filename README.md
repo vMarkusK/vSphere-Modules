@@ -71,9 +71,11 @@ Report and Set VM Disk IO Limits
 
 ## Set-CBT.psm1
 
-This Function enables or disables CBT.
+This Function enables or disables CBT. In addition a new VI-Property is added.
 
 ![Set-CBT](/Media/Set-CBT.png)
+
+![Set-CBT_VI-Property](/Media/Set-CBT_VI-Property.png)
 
 ## Recommend-Sizing.psm1
 
