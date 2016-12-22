@@ -7,13 +7,14 @@ function Konfig-ESXi {
     Private Blog: mycloudrevolution.com
     ===========================================================================
     Changelog:  
-    2016.12 ver 1.0 Base Release 
+    2016.12 ver 1.0 Base Release
+    2016.12 ver 1.1 ESXi 6.5 Tests, Minor enhancements  
     ===========================================================================
     External Code Sources: 
     Function My-Logger : http://www.virtuallyghetto.com/
     ===========================================================================
     Tested Against Environment:
-    vSphere Version: 5.5 U2
+    vSphere Version: ESXi 5.5 U2, ESXi 6.5
     PowerCLI Version: PowerCLI 6.3 R1, PowerCLI 6.5 R1
     PowerShell Version: 4.0, 5.0
     OS Version: Windows 8.1, Server 2012 R2
@@ -21,7 +22,14 @@ function Konfig-ESXi {
     ===========================================================================
 
     .DESCRIPTION
-    This Function process the Basic settings for a new ESXi. 
+    This Function sets the Basic settings for a new ESXi.
+
+    * NTP
+    * SSH
+    * Syslog
+    * Power Management
+    * HP 3PAR SATP/PSP Rule
+    * ... 
 
     .Example
     Konfig-ESXi -VMHost myesxi.lan.local -NTP 192.168.2.1, 192.168.2.2 -syslog "udp://loginsight.lan.local:514"
@@ -89,7 +97,9 @@ Process {
 
     #region: Start vCenter Connection
     My-Logger "Starting to Process ESXi Server Connection to $VMHost ..."
-    Disconnect-VIServer * -Force -Confirm:$False
+    if (($global:DefaultVIServers).count -gt 0) {
+       Disconnect-VIServer  -Force -Confirm:$False -ErrorAction SilentlyContinue 
+    }
     $VIConnection = Connect-VIServer -Server $VMHost
     if (-not $VIConnection.IsConnected) {
         Write-Error "ESXi Connection Failed."
@@ -181,7 +191,8 @@ Process {
         
         #region: Conf Syslog
         My-Logger "Setting Syslog Firewall Rule ..."
-        if ($SyslogFW = ($ESXiHost | Get-VMHostFirewallException | where {$_.Name -eq 'syslog'}).Enabled -eq $False ){
+        $SyslogFW = ($ESXiHost | Get-VMHostFirewallException | where {$_.Name -eq 'syslog'})
+        if ($SyslogFW.Enabled -eq $False ){
             $SyslogFW | Set-VMHostFirewallException -Enabled:$true -Confirm:$false | Out-Null
             My-Logger "  Syslog Firewall Rule enabled"
         }
