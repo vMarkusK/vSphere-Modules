@@ -24,9 +24,6 @@ function Konfig-ESXi {
     This Function process the Basic settings for a new ESXi. 
 
     .Example
-    Konfig-ESXi -VMHost myesxi.lan.local
-
-    .Example
     Konfig-ESXi -VMHost myesxi.lan.local -NTP 192.168.2.1, 192.168.2.2 -syslog "udp://loginsight.lan.local:514"
 
     .PARAMETER VMHost
