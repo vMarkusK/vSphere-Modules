@@ -43,6 +43,8 @@ function Konfig-ESXi {
     .PARAMETER Syslog
     Syslog Server to set, e.g. "udp://loginsight.lan.local:514"
 
+    DNS Name must be resolvable!
+
 
 #Requires PS -Version 4.0
 #Requires -Modules VMware.VimAutomation.Core, @{ModuleName="VMware.VimAutomation.Core";ModuleVersion="6.3.0.0"}
