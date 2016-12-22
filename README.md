@@ -82,3 +82,9 @@ This Function enables or disables CBT. In addition a new VI-Property is added.
 This Function collects Basic vSphere Informations for a Hardware Sizing Recommandation. Focus is in Compute Ressources.   
 
 ![Set-IOPSLimit](/Media/Recommend-Sizing.png)
+
+## Konfig-ESXi.psm1
+
+This Function sets the Basic settings for a new ESXi.   
+
+![Konfig-ESXi](/Media/Konfig-ESXi.png)
