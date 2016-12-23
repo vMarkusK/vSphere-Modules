@@ -88,3 +88,9 @@ This Function collects Basic vSphere Informations for a Hardware Sizing Recomman
 This Function sets the Basic settings for a new ESXi.   
 
 ![Konfig-ESXi](/Media/Konfig-ESXi.png)
+
+## Get-NewVMs.psm1
+
+This Function report newly created VMs by Cluster.   
+
+![Get-NewVMs](/Media/Get-NewVMs.png)
