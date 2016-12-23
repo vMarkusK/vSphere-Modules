@@ -28,6 +28,9 @@ function Get-NewVMs {
     Get-NewVMs -ClusterName Cluster* | ft -AutoSize  
 
     .Example
+    Get-NewVMs -ClusterName Cluster01  
+
+    .Example
     Get-NewVMs -ClusterName Cluster01, Cluster02 -Days 60 | ft -AutoSize
 
     .PARAMETER ClusterName
