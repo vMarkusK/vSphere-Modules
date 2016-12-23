@@ -91,6 +91,14 @@ This Function sets the Basic settings for a new ESXi.
 
 ## Get-NewVMs.psm1
 
-This Function report newly created VMs by Cluster.   
+This Function report newly created VMs by Cluster. 
+
+Prease use the enhanced version "Get-NewAndRemovedVMs" insted!  
 
 ![Get-NewVMs](/Media/Get-NewVMs.png)
+
+## Get-NewAndRemovedVMs.psm1
+
+This Function report newly created VMs by Cluster.   
+
+![Get-NewAndRemovedVMs](/Media/Get-NewAndRemovedVMs.png)
