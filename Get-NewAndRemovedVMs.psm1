@@ -31,6 +31,9 @@ function Get-NewAndRemovedVMs {
     .Example
     Get-NewAndRemovedVMs -ClusterName Cluster01 -Days 90
 
+	.Example
+    Get-NewAndRemovedVMs -ClusterName * -Days 90 -Summary
+
     .PARAMETER ClusterName
     Name or Wildcard of your vSphere Cluster Name(s) to report.
 
