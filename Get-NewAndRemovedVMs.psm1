@@ -53,7 +53,7 @@ param(
     [ValidateNotNullorEmpty()]
         [String]$ClusterName,
 	[Parameter(Mandatory=$False, ValueFromPipeline=$False, Position=1, HelpMessage = "Displays only a summary")]
-		[Switch]$Summary,
+		[Switch]$Summary = $False,
     [Parameter(Mandatory=$False, ValueFromPipeline=$False, Position=2, HelpMessage = "Range in Days to report")]
 		[String]$Days = "30"
 )
@@ -133,22 +133,30 @@ Begin {
 }
 
 process {
-    If ($Summary) {
-		$output = $sortedResult | where {$_.Cluster -like $ClusterName}
+	$result = Get-VIEventPlus -Start ((get-date).adddays(-$Days)) -EventType @("VmCreatedEvent", "VmBeingClonedEvent", "VmBeingDeployedEvent","VmRemovedEvent")
+	$sortedResult = $result | Select CreatedTime, @{N='Cluster';E={$_.ComputeResource.Name}}, @{Name="VMName";Expression={$_.vm.name}}, UserName, @{N='Type';E={$_.GetType().Name}}, FullFormattedMessage | Sort CreatedTime
+	$Output = $sortedResult | where {$_.Cluster -like $ClusterName}
+	
+}
+end {
+	If ($Summary) {
+
+		$Created 	= [Array]$($Output | Where-Object {$_.Type -like "VmCreatedEvent"})
+		$Cloned		= [Array]$($Output | Where-Object {$_.Type -like "VmBeingClonedEvent"})
+		$Deployed 	= [Array]$($Output | Where-Object {$_.Type -like "VmBeingDeployedEvent"})
+		$Removed 	= [Array]$($Output | Where-Object {$_.Type -like "VmRemovedEvent"})
+		
 		$Report = [PSCustomObject] @{
-							Created 	= (Get-VIEventPlus -Start ((get-date).adddays(-$Days)) -EventType @("VmCreatedEvent") | where {$_.ComputeResource.Name -like $ClusterName}).count
-							Cloned 		= (Get-VIEventPlus -Start ((get-date).adddays(-$Days)) -EventType @("VmBeingClonedEvent") | where {$_.ComputeResource.Name -like $ClusterName}).count
-							Deployed 	= (Get-VIEventPlus -Start ((get-date).adddays(-$Days)) -EventType @("VmBeingDeployedEvent") | where {$_.ComputeResource.Name -like $ClusterName}).count
-							Removed 	= (Get-VIEventPlus -Start ((get-date).adddays(-$Days)) -EventType @("VmRemovedEvent") | where {$_.ComputeResource.Name -like $ClusterName}).count
+							Created 	= ($Created).count
+							Cloned 		= ($Cloned).count
+							Deployed 	= ($Deployed).count
+							Removed 	= ($Removed).count
 
 						}
 		$Report
 	}
 	else {
-		$result = Get-VIEventPlus -Start ((get-date).adddays(-$Days)) -EventType @("VmCreatedEvent", "VmBeingClonedEvent", "VmBeingDeployedEvent","VmRemovedEvent")
-		$sortedResult = $result | Select CreatedTime, @{N='Cluster';E={$_.ComputeResource.Name}}, @{Name="VMName";Expression={$_.vm.name}}, UserName, @{N='Type';E={$_.GetType().Name}}, FullFormattedMessage | Sort CreatedTime
-		$sortedResult | where {$_.Cluster -like $ClusterName}
+		$Output
 	}
-	
 }
 }
