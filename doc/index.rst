@@ -5,6 +5,7 @@ Welcome to the Rubrik PowerShell Module
    :target: http://vSphere-Modules.readthedocs.io/en/latest/?badge=latest
 
 This my collection of VMware PowerCLI Modules. 
+Project Page: http://mycloudrevolution.com/projekte/vsphere-powershell-modules/
 
 .. _available on GitHub: https://github.com/mycloudrevolution/vSphere-Modules
 
