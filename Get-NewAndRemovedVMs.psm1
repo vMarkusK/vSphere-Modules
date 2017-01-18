@@ -38,7 +38,7 @@ function Get-NewAndRemovedVMs {
     Name or Wildcard of your vSphere Cluster Name(s) to report.
 
 	.PARAMETER Summary
-    Displays only a summary instead of teh whole report.
+    Displays only a short summary instead of the whole report.
 
     .PARAMETER Day
     Range in Days to report.
