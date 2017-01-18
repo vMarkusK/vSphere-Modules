@@ -1,11 +1,8 @@
 Welcome to the Rubrik PowerShell Module
 ========================
 
-.. image:: http://mycloudrevolution.com/wp-content/uploads/2017/01/PS-StoreOnce.png
-   :target: http://bit.ly/2aOpQ4j
-
-.. image:: http://readthedocs.org/projects/storeonce-psmodule/badge/?version=latest
-   :target: http://storeonce-psmodule.readthedocs.io/en/latest/?badge=latest
+.. image:: http://readthedocs.org/projects/vSphere-Modules/badge/?version=latest
+   :target: http://vSphere-Modules.readthedocs.io/en/latest/?badge=latest
 
 This my collection of VMware PowerCLI Modules. 
 
