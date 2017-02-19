@@ -12,7 +12,7 @@
 # RootModule = ''
 
 # Die Versionsnummer dieses Moduls
-ModuleVersion = '1.0.2'
+ModuleVersion = '1.0.3'
 
 # ID zur eindeutigen Kennzeichnung dieses Moduls
 GUID = '7274fb26-4736-4a3e-9a23-2f05a9f1b9b6'
@@ -67,6 +67,7 @@ NestedModules = @('Apply-Hardening.psm1',
                'Get-NewAndRemovedVMs.psm1', 
                'Get-NewVMs.psm1', 
                'Get-VMDisk.psm1', 
+               'Get-NICDetails.psm1',
                'Get-VMID.psm1', 
                'Get-VMmaxIOPS.psm1', 
                'Konfig-ESXi.psm1', 
@@ -78,7 +79,7 @@ NestedModules = @('Apply-Hardening.psm1',
                'Start-UNMAP.psm1')
 
 # Aus diesem Modul zu exportierende Funktionen
-FunctionsToExport = 'Apply-Hardening', 'Get-NewAndRemovedVMs', 'Get-NewVMs', 'Get-VMDisk', 
+FunctionsToExport = 'Apply-Hardening', 'Get-NewAndRemovedVMs', 'Get-NewVMs', 'Get-VMDisk', 'Get-NICDetails', 
                'Get-VMID', 'Get-VMmaxIOPS', 'Konfig-ESXi', 'Push-vLIMessage', 
                'Recommend-Sizing', 'Set-CBT', 'Set-ConsolidationFix', 'Set-IOPSLimit', 
                'Start-UNMAP'

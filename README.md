@@ -16,8 +16,6 @@ vSphere Modules
 
 ## This is my Module Collection for VMware vSphere. 
 
-`My PS C:\Users\mkraus\Documents\GitHub\vSphere-Modules> Get-ChildItem -Name *.psm1 | %{Import-Module .\$_}`
-
 
 <a name="Modules">
 # Modules
@@ -102,3 +100,9 @@ Prease use the enhanced version "Get-NewAndRemovedVMs" insted!
 This Function report newly created VMs by Cluster.   
 
 ![Get-NewAndRemovedVMs](/Media/Get-NewAndRemovedVMs.png)
+
+## Get-NICDetails.psm1
+
+This Function reports Firmware and Driver Details for your ESXi vmnic(s).
+
+![Get-NICDetails](/Media/Get-NICDetaild.png)

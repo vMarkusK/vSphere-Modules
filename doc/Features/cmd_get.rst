@@ -131,6 +131,52 @@ HINWEISE
     Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Get-NewVMs -full".
 
 
+Get-NICDetails
+-------------------------
+
+NAME
+    Get-NICDetails
+    
+ÜBERSICHT
+    
+    
+SYNTAX
+    Get-NICDetails [-Clustername] <String> [<CommonParameters>]
+    
+    
+BESCHREIBUNG
+    Reports Firmware and Driver Details for your ESXi vmnics.
+    
+
+PARAMETER
+    -Clustername <String>
+        Name or Wildcard of your vSphere Cluster Name to process.
+        
+        
+        #Requires PS -Version 4.0
+        #Requires -Modules VMware.VimAutomation.Core, @{ModuleName="VMware.VimAutomation.Core";ModuleVersion="6.3.0.0"}
+        
+    <CommonParameters>
+        Dieses Cmdlet unterstützt folgende allgemeine Parameter: "Verbose", "Debug",
+        "ErrorAction", "ErrorVariable", "WarningAction", "WarningVariable",
+        "OutBuffer", "PipelineVariable" und "OutVariable". Weitere Informationen finden Sie unter 
+        "about_CommonParameters" (http://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    -------------------------- BEISPIEL 1 --------------------------
+    
+    PS C:\>Get-NICDetails -Clustername *
+    
+    
+    
+    
+    
+    
+HINWEISE
+    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Get-NICDetails -examples".
+    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Get-NICDetails -detailed".
+    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Get-NICDetails -full".
+
+
 Get-VMDisk
 -------------------------
 
