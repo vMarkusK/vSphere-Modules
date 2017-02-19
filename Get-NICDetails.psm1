@@ -79,7 +79,7 @@ Process {
                         BusInfo = $nicdetail.driverinfo.BusInfo
 				        Driver = $nicdetail.driverinfo.Driver
 				        FirmwareVersion = $nicdetail.driverinfo.FirmwareVersion
-				        DriverVersin = $nicdetail.driverinfo.Version
+				        DriverVersion = $nicdetail.driverinfo.Version
 				        }
 		        $MyView += $NICReport
 		        }
