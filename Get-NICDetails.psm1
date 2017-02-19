@@ -75,8 +75,8 @@ Process {
 		        $NICReport = [PSCustomObject] @{
 				        Host = $myVMhost.Name
 				        vmnic = $nicdetail.Name
-                        LinkStatus = $nicdetail.LinkStatus
-                        BusInfo = $nicdetail.driverinfo.BusInfo
+				        LinkStatus = $nicdetail.LinkStatus
+				        BusInfo = $nicdetail.driverinfo.BusInfo
 				        Driver = $nicdetail.driverinfo.Driver
 				        FirmwareVersion = $nicdetail.driverinfo.FirmwareVersion
 				        DriverVersion = $nicdetail.driverinfo.Version
