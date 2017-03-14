@@ -1,11 +1,13 @@
 Welcome to my vSphere Module Collection
 ========================
 
-.. image:: http://mycloudrevolution.com/wp-content/uploads/2016/06/PowerCLI-1.png
-   :target: http://vmware.com/go/powercli
-
 .. image:: http://readthedocs.org/projects/vsphere-modules/badge/?version=latest
    :target: http://vsphere-modules.readthedocs.io/en/latest/?badge=latest
+
+
+
+.. image:: http://mycloudrevolution.com/wp-content/uploads/2016/06/PowerCLI-1.png
+   :target: http://vmware.com/go/powercli
 
 This my collection of VMware PowerCLI Modules. These Module should extend and facilitate the out of the box Features. 
 Project Page: http://mycloudrevolution.com/projekte/vsphere-powershell-modules/
