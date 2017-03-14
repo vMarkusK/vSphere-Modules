@@ -10,7 +10,7 @@ Set-CBT
 NAME
     Set-CBT
     
-ÜBERSICHT
+SYNOPSIS
     
     
 SYNTAX
@@ -19,11 +19,11 @@ SYNTAX
     Set-CBT [-myVMs] <InventoryItemImpl[]> [[-DisableCBT]] [<CommonParameters>]
     
     
-BESCHREIBUNG
+DESCRIPTION
     This Function enables or disables CBT.
     
 
-PARAMETER
+PARAMETERS
     -myVMs <InventoryItemImpl[]>
         
     -EnableCBT [<SwitchParameter>]
@@ -36,12 +36,12 @@ PARAMETER
         Disables CBT for any VMs found with it enabled
         
     <CommonParameters>
-        Dieses Cmdlet unterstützt folgende allgemeine Parameter: "Verbose", "Debug",
-        "ErrorAction", "ErrorVariable", "WarningAction", "WarningVariable",
-        "OutBuffer", "PipelineVariable" und "OutVariable". Weitere Informationen finden Sie unter 
-        "about_CommonParameters" (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
+        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- BEISPIEL 1 --------------------------
+    -------------------------- EXAMPLE 1 --------------------------
     
     PS C:\>Get-VN TST* | Set-CBT -DisableCBT
     
@@ -50,7 +50,7 @@ PARAMETER
     
     
     
-    -------------------------- BEISPIEL 2 --------------------------
+    -------------------------- EXAMPLE 2 --------------------------
     
     PS C:\>Get-VN TST* | Set-CBT -EnableCBT
     
@@ -59,10 +59,10 @@ PARAMETER
     
     
     
-HINWEISE
-    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Set-CBT -examples".
-    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Set-CBT -detailed".
-    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Set-CBT -full".
+REMARKS
+    To see the examples, type: "get-help Set-CBT -examples".
+    For more information, type: "get-help Set-CBT -detailed".
+    For technical information, type: "get-help Set-CBT -full".
 
 
 Set-ConsolidationFix
@@ -71,7 +71,7 @@ Set-ConsolidationFix
 NAME
     Set-ConsolidationFix
     
-ÜBERSICHT
+SYNOPSIS
     Set VM SnapShot Consolidation Timout Workaround
     
     
@@ -79,23 +79,23 @@ SYNTAX
     Set-ConsolidationFix [-vCenterVM] <String> [-Fix] <String> [<CommonParameters>]
     
     
-BESCHREIBUNG
+DESCRIPTION
     Set VM SnapShot Consolidation Timout Workaround
     
 
-PARAMETER
+PARAMETERS
     -vCenterVM <String>
         
     -Fix <String>
         Timeout os Stun
         
     <CommonParameters>
-        Dieses Cmdlet unterstützt folgende allgemeine Parameter: "Verbose", "Debug",
-        "ErrorAction", "ErrorVariable", "WarningAction", "WarningVariable",
-        "OutBuffer", "PipelineVariable" und "OutVariable". Weitere Informationen finden Sie unter 
-        "about_CommonParameters" (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
+        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- BEISPIEL 1 --------------------------
+    -------------------------- EXAMPLE 1 --------------------------
     
     PS C:\>Set-ConsolidationFix -vCenterVM "myTest" -Fix "Timeout"
     
@@ -104,7 +104,7 @@ PARAMETER
     
     
     
-    -------------------------- BEISPIEL 2 --------------------------
+    -------------------------- EXAMPLE 2 --------------------------
     
     PS C:\>Set-ConsolidationFix -vCenterVM "myTest" -Fix "Stun"
     
@@ -113,11 +113,11 @@ PARAMETER
     
     
     
-HINWEISE
-    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Set-ConsolidationFix -examples".
-    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Set-ConsolidationFix -detailed".
-    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Set-ConsolidationFix -full".
-    Geben Sie zum Abrufen der Onlinehilfe Folgendes ein: "get-help Set-ConsolidationFix -online"
+REMARKS
+    To see the examples, type: "get-help Set-ConsolidationFix -examples".
+    For more information, type: "get-help Set-ConsolidationFix -detailed".
+    For technical information, type: "get-help Set-ConsolidationFix -full".
+    For online help, type: "get-help Set-ConsolidationFix -online"
 
 
 Set-IOPSLimit
@@ -126,18 +126,18 @@ Set-IOPSLimit
 NAME
     Set-IOPSLimit
     
-ÜBERSICHT
+SYNOPSIS
     
     
 SYNTAX
     Set-IOPSLimit [-VMs] <InventoryItemImpl[]> [-ConfigPath] <String> [[-Exclusions] <String>] [[-SetLimit]] [<CommonParameters>]
     
     
-BESCHREIBUNG
+DESCRIPTION
     Report and Set VM Disk IO Limits
     
 
-PARAMETER
+PARAMETERS
     -VMs <InventoryItemImpl[]>
         Specify the VMs
         
@@ -172,12 +172,12 @@ PARAMETER
         #Requires -Modules VMware.VimAutomation.Core, @{ModuleName="VMware.VimAutomation.Core";ModuleVersion="6.3.0.0"}
         
     <CommonParameters>
-        Dieses Cmdlet unterstützt folgende allgemeine Parameter: "Verbose", "Debug",
-        "ErrorAction", "ErrorVariable", "WarningAction", "WarningVariable",
-        "OutBuffer", "PipelineVariable" und "OutVariable". Weitere Informationen finden Sie unter 
-        "about_CommonParameters" (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
+        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- BEISPIEL 1 --------------------------
+    -------------------------- EXAMPLE 1 --------------------------
     
     PS C:\>Get-VM -Name TST* | Set-IOPSLimit -ConfigPath C:\Scripts\vSphere-Modules\Set-IOPSLimit.xml -SetLimit | ft -AutoSize
     
@@ -186,7 +186,7 @@ PARAMETER
     
     
     
-    -------------------------- BEISPIEL 2 --------------------------
+    -------------------------- EXAMPLE 2 --------------------------
     
     PS C:\>Get-VM -Name TST* | Set-IOPSLimit -ConfigPath C:\Scripts\vSphere-Modules\Set-IOPSLimit.xml | ft -AutoSize
     
@@ -195,10 +195,10 @@ PARAMETER
     
     
     
-HINWEISE
-    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Set-IOPSLimit -examples".
-    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Set-IOPSLimit -detailed".
-    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Set-IOPSLimit -full".
+REMARKS
+    To see the examples, type: "get-help Set-IOPSLimit -examples".
+    For more information, type: "get-help Set-IOPSLimit -detailed".
+    For technical information, type: "get-help Set-IOPSLimit -full".
 
 
 

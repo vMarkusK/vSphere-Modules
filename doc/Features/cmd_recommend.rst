@@ -10,18 +10,18 @@ Recommend-Sizing
 NAME
     Recommend-Sizing
     
-ÜBERSICHT
+SYNOPSIS
     
     
 SYNTAX
     Recommend-Sizing [-ClusterNames] <Array> [[-Stats]] [[-StatsRange] <Int32>] [<CommonParameters>]
     
     
-BESCHREIBUNG
+DESCRIPTION
     This Function collects Basic vSphere Informations for a Hardware Sizing Recommandation. Focus is in Compute Ressources.
     
 
-PARAMETER
+PARAMETERS
     -ClusterNames <Array>
         List of your vSphere Cluser Names to process.
         
@@ -38,12 +38,12 @@ PARAMETER
         #Requires -Modules VMware.VimAutomation.Core, @{ModuleName="VMware.VimAutomation.Core";ModuleVersion="6.3.0.0"}
         
     <CommonParameters>
-        Dieses Cmdlet unterstützt folgende allgemeine Parameter: "Verbose", "Debug",
-        "ErrorAction", "ErrorVariable", "WarningAction", "WarningVariable",
-        "OutBuffer", "PipelineVariable" und "OutVariable". Weitere Informationen finden Sie unter 
-        "about_CommonParameters" (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
+        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- BEISPIEL 1 --------------------------
+    -------------------------- EXAMPLE 1 --------------------------
     
     PS C:\>Recommend-Sizing -ClusterNames Cluster01, Cluster02 -Stats -StatsRange 60 -Verbose
     
@@ -52,7 +52,7 @@ PARAMETER
     
     
     
-    -------------------------- BEISPIEL 2 --------------------------
+    -------------------------- EXAMPLE 2 --------------------------
     
     PS C:\>Recommend-Sizing -ClusterNames Cluster01, Cluster02
     
@@ -61,7 +61,7 @@ PARAMETER
     
     
     
-    -------------------------- BEISPIEL 3 --------------------------
+    -------------------------- EXAMPLE 3 --------------------------
     
     PS C:\>Recommend-Sizing -ClusterNames Cluster01
     
@@ -70,10 +70,10 @@ PARAMETER
     
     
     
-HINWEISE
-    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Recommend-Sizing -examples".
-    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Recommend-Sizing -detailed".
-    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Recommend-Sizing -full".
+REMARKS
+    To see the examples, type: "get-help Recommend-Sizing -examples".
+    For more information, type: "get-help Recommend-Sizing -detailed".
+    For technical information, type: "get-help Recommend-Sizing -full".
 
 
 

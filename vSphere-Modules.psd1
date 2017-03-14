@@ -1,18 +1,18 @@
 #
-# Modulmanifest fï¿½r das Modul "PSGet_vSphere-Modules"
+# Modulmanifest für das Modul "PSGet_vSphere-Modules"
 #
 # Generiert von: Markus Kraus
 #
-# Generiert am: 18.01.2017
+# Generiert am: 15.03.2017
 #
 
 @{
 
-# Die diesem Manifest zugeordnete Skript- oder Binï¿½rmoduldatei.
+# Die diesem Manifest zugeordnete Skript- oder Binärmoduldatei.
 # RootModule = ''
 
 # Die Versionsnummer dieses Moduls
-ModuleVersion = '1.0.3'
+ModuleVersion = '1.0.4'
 
 # ID zur eindeutigen Kennzeichnung dieses Moduls
 GUID = '7274fb26-4736-4a3e-9a23-2f05a9f1b9b6'
@@ -23,37 +23,37 @@ Author = 'Markus Kraus'
 # Unternehmen oder Hersteller dieses Moduls
 CompanyName = 'mycloudrevolution.com'
 
-# Urheberrechtserklï¿½rung fï¿½r dieses Modul
+# Urheberrechtserklärung für dieses Modul
 Copyright = '(c) 2017 Markus Kraus. Alle Rechte vorbehalten.'
 
 # Beschreibung der von diesem Modul bereitgestellten Funktionen
 # Description = ''
 
-# Die fï¿½r dieses Modul mindestens erforderliche Version des Windows PowerShell-Moduls
-# PowerShellVersion = '4.0'
+# Die für dieses Modul mindestens erforderliche Version des Windows PowerShell-Moduls
+# PowerShellVersion = ''
 
-# Der Name des fï¿½r dieses Modul erforderlichen Windows PowerShell-Hosts
+# Der Name des für dieses Modul erforderlichen Windows PowerShell-Hosts
 # PowerShellHostName = ''
 
-# Die fï¿½r dieses Modul mindestens erforderliche Version des Windows PowerShell-Hosts
+# Die für dieses Modul mindestens erforderliche Version des Windows PowerShell-Hosts
 # PowerShellHostVersion = ''
 
-# Die fï¿½r dieses Modul mindestens erforderliche Microsoft .NET Framework-Version
+# Die für dieses Modul mindestens erforderliche Microsoft .NET Framework-Version
 # DotNetFrameworkVersion = ''
 
-# Die fï¿½r dieses Modul mindestens erforderliche Version der CLR (Common Language Runtime)
+# Die für dieses Modul mindestens erforderliche Version der CLR (Common Language Runtime)
 # CLRVersion = ''
 
-# Die fï¿½r dieses Modul erforderliche Prozessorarchitektur ("Keine", "X86", "Amd64").
+# Die für dieses Modul erforderliche Prozessorarchitektur ("Keine", "X86", "Amd64").
 # ProcessorArchitecture = ''
 
-# Die Module, die vor dem Importieren dieses Moduls in die globale Umgebung geladen werden mï¿½ssen
+# Die Module, die vor dem Importieren dieses Moduls in die globale Umgebung geladen werden müssen
 # RequiredModules = @()
 
-# Die Assemblys, die vor dem Importieren dieses Moduls geladen werden mï¿½ssen
+# Die Assemblys, die vor dem Importieren dieses Moduls geladen werden müssen
 # RequiredAssemblies = @()
 
-# Die Skriptdateien (PS1-Dateien), die vor dem Importieren dieses Moduls in der Umgebung des Aufrufers ausgefï¿½hrt werden.
+# Die Skriptdateien (PS1-Dateien), die vor dem Importieren dieses Moduls in der Umgebung des Aufrufers ausgeführt werden.
 # ScriptsToProcess = @()
 
 # Die Typdateien (.ps1xml), die beim Importieren dieses Moduls geladen werden sollen
@@ -66,8 +66,9 @@ Copyright = '(c) 2017 Markus Kraus. Alle Rechte vorbehalten.'
 NestedModules = @('Apply-Hardening.psm1', 
                'Get-NewAndRemovedVMs.psm1', 
                'Get-NewVMs.psm1', 
+               'Get-NICDetails.psm1', 
+               'Get-UplinkDetails.psm1', 
                'Get-VMDisk.psm1', 
-               'Get-NICDetails.psm1',
                'Get-VMID.psm1', 
                'Get-VMmaxIOPS.psm1', 
                'Konfig-ESXi.psm1', 
@@ -76,13 +77,16 @@ NestedModules = @('Apply-Hardening.psm1',
                'Set-CBT.psm1', 
                'Set-ConsolidationFix.psm1', 
                'Set-IOPSLimit.psm1', 
-               'Start-UNMAP.psm1')
+               'Start-UNMAP.psm1', 
+               'Helper\Update-ModuleManifestData.psm1', 
+               'Helper\Update-PowerShellGallery.psm1')
 
 # Aus diesem Modul zu exportierende Funktionen
-FunctionsToExport = 'Apply-Hardening', 'Get-NewAndRemovedVMs', 'Get-NewVMs', 'Get-VMDisk', 'Get-NICDetails', 
-               'Get-VMID', 'Get-VMmaxIOPS', 'Konfig-ESXi', 'Push-vLIMessage', 
-               'Recommend-Sizing', 'Set-CBT', 'Set-ConsolidationFix', 'Set-IOPSLimit', 
-               'Start-UNMAP'
+FunctionsToExport = 'Apply-Hardening', 'Get-NewAndRemovedVMs', 'Get-NewVMs', 
+               'Get-NICDetails', 'Get-UplinkDetails', 'Get-VMDisk', 'Get-VMID', 
+               'Get-VMmaxIOPS', 'Konfig-ESXi', 'Push-vLIMessage', 'Recommend-Sizing', 
+               'Set-CBT', 'Set-ConsolidationFix', 'Set-IOPSLimit', 'Start-UNMAP', 
+               'Update-ModuleManifestData', 'Update-PowerShellGallery'
 
 # Aus diesem Modul zu exportierende Cmdlets
 CmdletsToExport = '*'
@@ -102,7 +106,7 @@ AliasesToExport = '*'
 # Liste aller Dateien in diesem Modulpaket
 # FileList = @()
 
-# Die privaten Daten, die an das in "RootModule/ModuleToProcess" angegebene Modul ï¿½bergeben werden sollen. Diese kï¿½nnen auch eine PSData-Hashtabelle mit zusï¿½tzlichen von PowerShell verwendeten Modulmetadaten enthalten.
+# Die privaten Daten, die an das in "RootModule/ModuleToProcess" angegebene Modul übergeben werden sollen. Diese können auch eine PSData-Hashtabelle mit zusätzlichen von PowerShell verwendeten Modulmetadaten enthalten.
 PrivateData = @{
 
     PSData = @{
@@ -132,7 +136,7 @@ PrivateData = @{
 # HelpInfo-URI dieses Moduls
 # HelpInfoURI = ''
 
-# Standardprï¿½fix fï¿½r Befehle, die aus diesem Modul exportiert werden. Das Standardprï¿½fix kann mit "Import-Module -Prefix" ï¿½berschrieben werden.
+# Standardpräfix für Befehle, die aus diesem Modul exportiert werden. Das Standardpräfix kann mit "Import-Module -Prefix" überschrieben werden.
 # DefaultCommandPrefix = ''
 
 }

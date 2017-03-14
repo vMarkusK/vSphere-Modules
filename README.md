@@ -106,3 +106,9 @@ This Function report newly created VMs by Cluster.
 This Function reports Firmware and Driver Details for your ESXi vmnic(s).
 
 ![Get-NICDetails](/Media/Get-NICDetaild.png)
+
+## Get-UplinkDetails.psm1
+
+This Function collects detailed informations about your ESXi Host connections to pSwitch and DVS / vSwitch.
+
+![Get-UplinkDetails](/Get-UplinkDetails.png)

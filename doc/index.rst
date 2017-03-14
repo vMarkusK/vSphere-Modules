@@ -1,6 +1,9 @@
 Welcome to my vSphere Module Collection
 ========================
 
+.. image:: http://mycloudrevolution.com/wp-content/uploads/2016/06/PowerCLI-1.png
+   :target: http://vmware.com/go/powercli
+
 .. image:: http://readthedocs.org/projects/vsphere-modules/badge/?version=latest
    :target: http://vsphere-modules.readthedocs.io/en/latest/?badge=latest
 

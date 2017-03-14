@@ -10,7 +10,7 @@ Start-UNMAP
 NAME
     Start-UNMAP
     
-ÜBERSICHT
+SYNOPSIS
     Process SCSI UNMAP on VMware Datastores
     
     
@@ -18,11 +18,11 @@ SYNTAX
     Start-UNMAP [-ClusterName] <String> [-DSWildcard] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
     
     
-BESCHREIBUNG
+DESCRIPTION
     This Function will process SCSI UNMAP on VMware Datastores via ESXCLI -V2
     
 
-PARAMETER
+PARAMETERS
     -ClusterName <String>
         
     -DSWildcard <String>
@@ -32,12 +32,12 @@ PARAMETER
     -Confirm [<SwitchParameter>]
         
     <CommonParameters>
-        Dieses Cmdlet unterstützt folgende allgemeine Parameter: "Verbose", "Debug",
-        "ErrorAction", "ErrorVariable", "WarningAction", "WarningVariable",
-        "OutBuffer", "PipelineVariable" und "OutVariable". Weitere Informationen finden Sie unter 
-        "about_CommonParameters" (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
+        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- BEISPIEL 1 --------------------------
+    -------------------------- EXAMPLE 1 --------------------------
     
     PS C:\>Start-UNMAP -ClusterName myCluster -DSWildcard *RAID5*
     
@@ -46,7 +46,7 @@ PARAMETER
     
     
     
-    -------------------------- BEISPIEL 2 --------------------------
+    -------------------------- EXAMPLE 2 --------------------------
     
     PS C:\>Start-UNMAP -ClusterName myCluster -DSWildcard *RAID5* -Verbose -WhatIf
     
@@ -55,11 +55,11 @@ PARAMETER
     
     
     
-HINWEISE
-    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Start-UNMAP -examples".
-    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Start-UNMAP -detailed".
-    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Start-UNMAP -full".
-    Geben Sie zum Abrufen der Onlinehilfe Folgendes ein: "get-help Start-UNMAP -online"
+REMARKS
+    To see the examples, type: "get-help Start-UNMAP -examples".
+    For more information, type: "get-help Start-UNMAP -detailed".
+    For technical information, type: "get-help Start-UNMAP -full".
+    For online help, type: "get-help Start-UNMAP -online"
 
 
 

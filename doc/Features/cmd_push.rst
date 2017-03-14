@@ -10,7 +10,7 @@ Push-vLIMessage
 NAME
     Push-vLIMessage
     
-ÜBERSICHT
+SYNOPSIS
     Push Messages to VMware vRealize Log Inisght.
     
     
@@ -19,11 +19,11 @@ SYNTAX
     [[-FieldContent] <String>] [<CommonParameters>]
     
     
-BESCHREIBUNG
+DESCRIPTION
     Push Messages to VMware vRealize Log Inisght.
     
 
-PARAMETER
+PARAMETERS
     -Text <String>
         Specify the Event Text
         
@@ -44,12 +44,12 @@ PARAMETER
         If FielName is missing and FielContent is given, it will be ignored
         
     <CommonParameters>
-        Dieses Cmdlet unterstützt folgende allgemeine Parameter: "Verbose", "Debug",
-        "ErrorAction", "ErrorVariable", "WarningAction", "WarningVariable",
-        "OutBuffer", "PipelineVariable" und "OutVariable". Weitere Informationen finden Sie unter 
-        "about_CommonParameters" (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
+        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- BEISPIEL 1 --------------------------
+    -------------------------- EXAMPLE 1 --------------------------
     
     PS C:\>Push-vLIMessage -vLIServer "loginsight.lan.local -vLIAgentID "12862842-5A6D-679C-0E38-0E2BE888BB28" -Text "My Test"
     
@@ -58,7 +58,7 @@ PARAMETER
     
     
     
-    -------------------------- BEISPIEL 2 --------------------------
+    -------------------------- EXAMPLE 2 --------------------------
     
     PS C:\>Push-vLIMessage -vLIServer "loginsight.lan.local -vLIAgentID "12862842-5A6D-679C-0E38-0E2BE888BB28" -Text "My Test" -Hostname 
     MyTEST -FieldName myTest -FieldContent myTest
@@ -68,11 +68,11 @@ PARAMETER
     
     
     
-HINWEISE
-    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Push-vLIMessage -examples".
-    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Push-vLIMessage -detailed".
-    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Push-vLIMessage -full".
-    Geben Sie zum Abrufen der Onlinehilfe Folgendes ein: "get-help Push-vLIMessage -online"
+REMARKS
+    To see the examples, type: "get-help Push-vLIMessage -examples".
+    For more information, type: "get-help Push-vLIMessage -detailed".
+    For technical information, type: "get-help Push-vLIMessage -full".
+    For online help, type: "get-help Push-vLIMessage -online"
 
 
 

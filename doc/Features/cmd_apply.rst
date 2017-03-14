@@ -10,18 +10,18 @@ Apply-Hardening
 NAME
     Apply-Hardening
     
-ÜBERSICHT
+SYNOPSIS
     
     
 SYNTAX
     Apply-Hardening [-VMs] <InventoryItemImpl[]> [<CommonParameters>]
     
     
-BESCHREIBUNG
+DESCRIPTION
     Applys a set of Hardening options to your VMs
     
 
-PARAMETER
+PARAMETERS
     -VMs <InventoryItemImpl[]>
         Specify the VMs 
         
@@ -30,12 +30,12 @@ PARAMETER
         #Requires -Modules VMware.VimAutomation.Core, @{ModuleName="VMware.VimAutomation.Core";ModuleVersion="6.3.0.0"}
         
     <CommonParameters>
-        Dieses Cmdlet unterstützt folgende allgemeine Parameter: "Verbose", "Debug",
-        "ErrorAction", "ErrorVariable", "WarningAction", "WarningVariable",
-        "OutBuffer", "PipelineVariable" und "OutVariable". Weitere Informationen finden Sie unter 
-        "about_CommonParameters" (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
+        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- BEISPIEL 1 --------------------------
+    -------------------------- EXAMPLE 1 --------------------------
     
     PS C:\>Get-VM TST* | Apply-Hardening
     
@@ -44,7 +44,7 @@ PARAMETER
     
     
     
-    -------------------------- BEISPIEL 2 --------------------------
+    -------------------------- EXAMPLE 2 --------------------------
     
     PS C:\>$SampleVMs = Get-VM "TST*"
     
@@ -53,10 +53,10 @@ PARAMETER
     
     
     
-HINWEISE
-    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Apply-Hardening -examples".
-    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Apply-Hardening -detailed".
-    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Apply-Hardening -full".
+REMARKS
+    To see the examples, type: "get-help Apply-Hardening -examples".
+    For more information, type: "get-help Apply-Hardening -detailed".
+    For technical information, type: "get-help Apply-Hardening -full".
 
 
 

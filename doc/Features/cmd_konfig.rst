@@ -10,14 +10,14 @@ Konfig-ESXi
 NAME
     Konfig-ESXi
     
-ÜBERSICHT
+SYNOPSIS
     
     
 SYNTAX
     Konfig-ESXi [-VMHost] <String> [-NTP] <Array> [-syslog] <String> [<CommonParameters>]
     
     
-BESCHREIBUNG
+DESCRIPTION
     This Function sets the Basic settings for a new ESXi.
     
     * NTP
@@ -28,7 +28,7 @@ BESCHREIBUNG
     * ...
     
 
-PARAMETER
+PARAMETERS
     -VMHost <String>
         Host to configure.
         
@@ -45,12 +45,12 @@ PARAMETER
         #Requires -Modules VMware.VimAutomation.Core, @{ModuleName="VMware.VimAutomation.Core";ModuleVersion="6.3.0.0"}
         
     <CommonParameters>
-        Dieses Cmdlet unterstützt folgende allgemeine Parameter: "Verbose", "Debug",
-        "ErrorAction", "ErrorVariable", "WarningAction", "WarningVariable",
-        "OutBuffer", "PipelineVariable" und "OutVariable". Weitere Informationen finden Sie unter 
-        "about_CommonParameters" (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
+        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- BEISPIEL 1 --------------------------
+    -------------------------- EXAMPLE 1 --------------------------
     
     PS C:\>Konfig-ESXi -VMHost myesxi.lan.local -NTP 192.168.2.1, 192.168.2.2 -syslog "udp://loginsight.lan.local:514"
     
@@ -59,10 +59,10 @@ PARAMETER
     
     
     
-HINWEISE
-    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Konfig-ESXi -examples".
-    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Konfig-ESXi -detailed".
-    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Konfig-ESXi -full".
+REMARKS
+    To see the examples, type: "get-help Konfig-ESXi -examples".
+    For more information, type: "get-help Konfig-ESXi -detailed".
+    For technical information, type: "get-help Konfig-ESXi -full".
 
 
 
