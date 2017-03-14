@@ -70,8 +70,24 @@ Process {
                 $nicdetail = $esxcli2.network.nic.get.Invoke($args)
                 $nicdetails += $nicdetail
 
-                }
+            }
+            
             ForEach ($nicdetail in $nicdetails){
+                try {
+                    $BusInfo = $nicdetail.driverinfo.BusInfo
+                    $BusInfo = $BusInfo.Replace(".", ":")
+                    $Device = $myVMhost | Get-VMHostPciDevice | where {$_.DeviceClass -eq "NetworkController" -and $_.Id -like $nicdetail.driverinfo.BusInfo}
+                    $vid = [String]::Format("{0:x}", $Device.VendorId)
+	                $did = [String]::Format("{0:x}", $Device.DeviceId)
+	                $svid = [String]::Format("{0:x}", $Device.SubVendorId)
+                    $ssid = [String]::Format("{0:x}", $Device.SubDeviceId)    
+                }
+                catch {
+                    $vid = "--" 
+                    $did = "--" 
+                    $svid = "--" 
+                    $ssid = "--"                 
+                }
 		        $NICReport = [PSCustomObject] @{
 				        Host = $myVMhost.Name
 				        vmnic = $nicdetail.Name
@@ -80,7 +96,12 @@ Process {
 				        Driver = $nicdetail.driverinfo.Driver
 				        FirmwareVersion = $nicdetail.driverinfo.FirmwareVersion
 				        DriverVersion = $nicdetail.driverinfo.Version
-				        }
+				        VID = $vid
+                        DID = $did
+                        SVID = $svid
+                        SSID = $ssid
+                    
+                        }
 		        $MyView += $NICReport
 		        }
 
