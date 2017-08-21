@@ -1,27 +1,18 @@
-<a name="Title">
-# Title
-
 vSphere Modules
 ===============
 
-|Navigation|
-|-----------------|
-|[About](#About)|
-|[Modules](#Modules)|
-
-<a name="About">
 # About
 
-[*Back to top*](#Title)
+## Project Owner:
 
-## This is my Module Collection for VMware vSphere. 
+Markus Kraus [@vMarkus_K](https://twitter.com/vMarkus_K)
 
+MY CLOUD-(R)EVOLUTION [mycloudrevolution.com](http://mycloudrevolution.com/)
 
-<a name="Modules">
+## Project Description
+
+This Repository contains my collection of VMware vSphere Modules.
 # Modules
-
-[*Back to top*](#Title)
-
 
 ## Get-VMID.psm1
 
@@ -105,10 +96,10 @@ This Function report newly created VMs by Cluster.
 
 This Function reports Firmware and Driver Details for your ESXi vmnic(s).
 
-![Get-NICDetails](/Media/Get-NICDetaild.png)
+![Get-NICDetails](/Media/Get-NICDetails.png)
 
 ## Get-UplinkDetails.psm1
 
 This Function collects detailed informations about your ESXi Host connections to pSwitch and DVS / vSwitch.
 
-![Get-UplinkDetails](/Get-UplinkDetails.png)
+![Get-UplinkDetails](/Media/Get-UplinkDetails.png)
