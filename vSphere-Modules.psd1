@@ -27,7 +27,7 @@ Author = 'Markus Kraus'
 CompanyName = 'mycloudrevolution.com'
 
 # Copyright statement for this module
-Copyright = '(c) 2017 Markus Kraus. Alle Rechte vorbehalten.'
+Copyright = '(c) 2017 Markus Kraus.'
 
 # Description of the functionality provided by this module
 # Description = ''
@@ -117,13 +117,13 @@ PrivateData = @{
     PSData = @{
 
         # Tags applied to this module. These help with module discovery in online galleries.
-        # Tags = @()
+        Tags = @('VMware', 'PowerCLI')
 
         # A URL to the license for this module.
-        # LicenseUri = ''
+        LicenseUri = 'https://github.com/mycloudrevolution/vSphere-Modules/blob/master/LICENSE'
 
         # A URL to the main website for this project.
-        # ProjectUri = ''
+        ProjectUri = 'https://github.com/mycloudrevolution/vSphere-Modules'
 
         # A URL to an icon representing this module.
         # IconUri = ''
