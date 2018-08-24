@@ -30,7 +30,7 @@ CompanyName = 'mycloudrevolution.com'
 Copyright = '(c) 2017 Markus Kraus.'
 
 # Description of the functionality provided by this module
-# Description = ''
+Description = 'This Repository contains a collection of my VMware vSphere Functions.'
 
 # Minimum version of the Windows PowerShell engine required by this module
 # PowerShellVersion = ''

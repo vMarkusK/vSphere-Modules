@@ -12,7 +12,8 @@ MY CLOUD-(R)EVOLUTION [mycloudrevolution.com](http://mycloudrevolution.com/)
 
 ## Project Description
 
-This Repository contains my collection of VMware vSphere Modules.
+This Repository contains a collection of my VMware vSphere Functions.
+
 # Modules
 
 ## Get-VMID.psm1
