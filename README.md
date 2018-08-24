@@ -104,3 +104,9 @@ This Function reports Firmware and Driver Details for your ESXi vmnic(s).
 This Function collects detailed informations about your ESXi Host connections to pSwitch and DVS / vSwitch.
 
 ![Get-UplinkDetails](/Media/Get-UplinkDetails.png)
+
+## Validate-ESXiPackages.psm1
+
+This Function compares all ESXi Host VIBs within a vSphere with a reference Hosts.
+
+![Validate-ESXiPackages](/Media/Validate-ESXiPackages.png)
