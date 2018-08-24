@@ -78,7 +78,7 @@ NestedModules = @('Apply-Hardening.psm1',
                'Set-ConsolidationFix.psm1', 
                'Set-IOPSLimit.psm1', 
                'Start-UNMAP.psm1',
-               'Validate-ESXiPackages', 
+               'Validate-ESXiPackages,psm1', 
                'Helper\Update-ModuleManifestData.psm1', 
                'Helper\Update-PowerShellGallery.psm1')
 
