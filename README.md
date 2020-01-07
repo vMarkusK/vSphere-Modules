@@ -111,3 +111,9 @@ This Function collects detailed informations about your ESXi Host connections to
 This Function compares all ESXi Host VIBs within a vSphere with a reference Hosts.
 
 ![Validate-ESXiPackages](/Media/Validate-ESXiPackages.png)
+
+## Get-DatastoreIDs.psm1
+
+This Function lists Datastore UUDs and Names per Host.
+
+![Get-DatastoreIDs](/Media/Get-DatastoreIDs.png)
