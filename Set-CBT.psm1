@@ -37,7 +37,6 @@ function Set-CBT {
     Enables CBT for any VMs found with it disabled
 
 #Requires PS -Version 4.0
-#Requires -Modules VMware.VimAutomation.Core, @{ModuleName="VMware.VimAutomation.Core";ModuleVersion="6.3.0.0"}
 #>
 
   [CmdletBinding()]

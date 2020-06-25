@@ -10,18 +10,18 @@ Recommend-Sizing
 NAME
     Recommend-Sizing
     
-SYNOPSIS
+ÜBERSICHT
     
     
 SYNTAX
     Recommend-Sizing [-ClusterNames] <Array> [[-Stats]] [[-StatsRange] <Int32>] [<CommonParameters>]
     
     
-DESCRIPTION
+BESCHREIBUNG
     This Function collects Basic vSphere Informations for a Hardware Sizing Recommandation. Focus is in Compute Ressources.
     
 
-PARAMETERS
+PARAMETER
     -ClusterNames <Array>
         List of your vSphere Cluser Names to process.
         
@@ -38,12 +38,12 @@ PARAMETERS
         #Requires -Modules VMware.VimAutomation.Core, @{ModuleName="VMware.VimAutomation.Core";ModuleVersion="6.3.0.0"}
         
     <CommonParameters>
-        This cmdlet supports the common parameters: Verbose, Debug,
+        Dieses Cmdlet unterstützt folgende allgemeine Parameter: Verbose, Debug,
         ErrorAction, ErrorVariable, WarningAction, WarningVariable,
-        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
-        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        OutBuffer, PipelineVariable und OutVariable. Weitere Informationen finden Sie unter 
+        "about_CommonParameters" (https:/go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- EXAMPLE 1 --------------------------
+    -------------------------- BEISPIEL 1 --------------------------
     
     PS C:\>Recommend-Sizing -ClusterNames Cluster01, Cluster02 -Stats -StatsRange 60 -Verbose
     
@@ -52,7 +52,7 @@ PARAMETERS
     
     
     
-    -------------------------- EXAMPLE 2 --------------------------
+    -------------------------- BEISPIEL 2 --------------------------
     
     PS C:\>Recommend-Sizing -ClusterNames Cluster01, Cluster02
     
@@ -61,7 +61,7 @@ PARAMETERS
     
     
     
-    -------------------------- EXAMPLE 3 --------------------------
+    -------------------------- BEISPIEL 3 --------------------------
     
     PS C:\>Recommend-Sizing -ClusterNames Cluster01
     
@@ -70,10 +70,10 @@ PARAMETERS
     
     
     
-REMARKS
-    To see the examples, type: "get-help Recommend-Sizing -examples".
-    For more information, type: "get-help Recommend-Sizing -detailed".
-    For technical information, type: "get-help Recommend-Sizing -full".
+HINWEISE
+    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Recommend-Sizing -examples".
+    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Recommend-Sizing -detailed".
+    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Recommend-Sizing -full".
 
 
 

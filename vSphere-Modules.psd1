@@ -1,5 +1,5 @@
 #
-# Modulmanifest für das Modul "PSGet_vSphere-Modules"
+# Modulmanifest fï¿½r das Modul "PSGet_vSphere-Modules"
 #
 # Generiert von: Markus Kraus
 #
@@ -8,13 +8,13 @@
 
 @{
 
-# Die diesem Manifest zugeordnete Skript- oder Binärmoduldatei.
+# Die diesem Manifest zugeordnete Skript- oder Binï¿½rmoduldatei.
 # RootModule = ''
 
 # Die Versionsnummer dieses Moduls
 ModuleVersion = '1.2.0'
 
-# Unterstützte PSEditions
+# Unterstï¿½tzte PSEditions
 # CompatiblePSEditions = @()
 
 # ID zur eindeutigen Kennzeichnung dieses Moduls
@@ -26,37 +26,37 @@ Author = 'Markus Kraus'
 # Unternehmen oder Hersteller dieses Moduls
 CompanyName = 'mycloudrevolution.com'
 
-# Urheberrechtserklärung für dieses Modul
+# Urheberrechtserklï¿½rung fï¿½r dieses Modul
 Copyright = '(c) 2017 Markus Kraus.'
 
 # Beschreibung der von diesem Modul bereitgestellten Funktionen
 Description = 'This Repository contains a collection of my VMware vSphere Functions.'
 
-# Die für dieses Modul mindestens erforderliche Version des Windows PowerShell-Moduls
+# Die fï¿½r dieses Modul mindestens erforderliche Version des Windows PowerShell-Moduls
 # PowerShellVersion = ''
 
-# Der Name des für dieses Modul erforderlichen Windows PowerShell-Hosts
+# Der Name des fï¿½r dieses Modul erforderlichen Windows PowerShell-Hosts
 # PowerShellHostName = ''
 
-# Die für dieses Modul mindestens erforderliche Version des Windows PowerShell-Hosts
+# Die fï¿½r dieses Modul mindestens erforderliche Version des Windows PowerShell-Hosts
 # PowerShellHostVersion = ''
 
-# Die für dieses Modul mindestens erforderliche Microsoft .NET Framework-Version. Diese erforderliche Komponente ist nur für die PowerShell Desktop-Edition gültig.
+# Die fï¿½r dieses Modul mindestens erforderliche Microsoft .NET Framework-Version. Diese erforderliche Komponente ist nur fï¿½r die PowerShell Desktop-Edition gï¿½ltig.
 # DotNetFrameworkVersion = ''
 
-# Die für dieses Modul mindestens erforderliche Version der CLR (Common Language Runtime). Diese erforderliche Komponente ist nur für die PowerShell Desktop-Edition gültig.
+# Die fï¿½r dieses Modul mindestens erforderliche Version der CLR (Common Language Runtime). Diese erforderliche Komponente ist nur fï¿½r die PowerShell Desktop-Edition gï¿½ltig.
 # CLRVersion = ''
 
-# Die für dieses Modul erforderliche Prozessorarchitektur ("Keine", "X86", "Amd64").
+# Die fï¿½r dieses Modul erforderliche Prozessorarchitektur ("Keine", "X86", "Amd64").
 # ProcessorArchitecture = ''
 
-# Die Module, die vor dem Importieren dieses Moduls in die globale Umgebung geladen werden müssen
+# Die Module, die vor dem Importieren dieses Moduls in die globale Umgebung geladen werden mï¿½ssen
 # RequiredModules = @()
 
-# Die Assemblys, die vor dem Importieren dieses Moduls geladen werden müssen
+# Die Assemblys, die vor dem Importieren dieses Moduls geladen werden mï¿½ssen
 # RequiredAssemblies = @()
 
-# Die Skriptdateien (PS1-Dateien), die vor dem Importieren dieses Moduls in der Umgebung des Aufrufers ausgeführt werden.
+# Die Skriptdateien (PS1-Dateien), die vor dem Importieren dieses Moduls in der Umgebung des Aufrufers ausgefï¿½hrt werden.
 # ScriptsToProcess = @()
 
 # Die Typdateien (.ps1xml), die beim Importieren dieses Moduls geladen werden sollen
@@ -83,27 +83,24 @@ NestedModules = @('Apply-Hardening.psm1',
                'Set-IOPSLimit.psm1', 
                'Set-VMHostSecureNTP.psm1', 
                'Start-UNMAP.psm1', 
-               'Helper\Update-ModuleManifestData.psm1', 
-               'Helper\Update-PowerShellGallery.psm1', 
                'Validate-ESXiPackages.psm1')
 
-# Aus diesem Modul zu exportierende Funktionen. Um optimale Leistung zu erzielen, verwenden Sie keine Platzhalter und löschen den Eintrag nicht. Verwenden Sie ein leeres Array, wenn keine zu exportierenden Funktionen vorhanden sind.
+# Aus diesem Modul zu exportierende Funktionen. Um optimale Leistung zu erzielen, verwenden Sie keine Platzhalter und lï¿½schen den Eintrag nicht. Verwenden Sie ein leeres Array, wenn keine zu exportierenden Funktionen vorhanden sind.
 FunctionsToExport = 'Apply-Hardening', 'Get-NewAndRemovedVMs', 'Get-NewVMs', 
                'Get-NICDetails', 'Get-UplinkDetails', 'Get-VMDisk', 
                'Get-VMHostUplinkDetails', 'Get-VMID', 'Get-VMmaxIOPS', 'Konfig-ESXi', 
                'Push-vLIMessage', 'Recommend-Sizing', 'Set-CBT', 
                'Set-ConsolidationFix', 'Set-IOPSLimit', 'Set-VMHostSecureNTP', 
-               'Start-UNMAP', 'Update-ModuleManifestData', 
-               'Update-PowerShellGallery', 'Validate-ESXiPackages'
+               'Start-UNMAP', 'Validate-ESXiPackages'
 
-# Aus diesem Modul zu exportierende Cmdlets. Um optimale Leistung zu erzielen, verwenden Sie keine Platzhalter und löschen den Eintrag nicht. Verwenden Sie ein leeres Array, wenn keine zu exportierenden Cmdlets vorhanden sind.
-CmdletsToExport = '*'
+# Aus diesem Modul zu exportierende Cmdlets. Um optimale Leistung zu erzielen, verwenden Sie keine Platzhalter und lï¿½schen den Eintrag nicht. Verwenden Sie ein leeres Array, wenn keine zu exportierenden Cmdlets vorhanden sind.
+# CmdletsToExport = '*'
 
 # Die aus diesem Modul zu exportierenden Variablen
-VariablesToExport = '*'
+# VariablesToExport = '*'
 
-# Aus diesem Modul zu exportierende Aliase. Um optimale Leistung zu erzielen, verwenden Sie keine Platzhalter und löschen den Eintrag nicht. Verwenden Sie ein leeres Array, wenn keine zu exportierenden Aliase vorhanden sind.
-AliasesToExport = '*'
+# Aus diesem Modul zu exportierende Aliase. Um optimale Leistung zu erzielen, verwenden Sie keine Platzhalter und lï¿½schen den Eintrag nicht. Verwenden Sie ein leeres Array, wenn keine zu exportierenden Aliase vorhanden sind.
+# AliasesToExport = '*'
 
 # Aus diesem Modul zu exportierende DSC-Ressourcen
 # DscResourcesToExport = @()
@@ -114,7 +111,7 @@ AliasesToExport = '*'
 # Liste aller Dateien in diesem Modulpaket
 # FileList = @()
 
-# Die privaten Daten, die an das in "RootModule/ModuleToProcess" angegebene Modul übergeben werden sollen. Diese können auch eine PSData-Hashtabelle mit zusätzlichen von PowerShell verwendeten Modulmetadaten enthalten.
+# Die privaten Daten, die an das in "RootModule/ModuleToProcess" angegebene Modul ï¿½bergeben werden sollen. Diese kï¿½nnen auch eine PSData-Hashtabelle mit zusï¿½tzlichen von PowerShell verwendeten Modulmetadaten enthalten.
 PrivateData = @{
 
     PSData = @{
@@ -144,7 +141,7 @@ PrivateData = @{
 # HelpInfo-URI dieses Moduls
 # HelpInfoURI = ''
 
-# Standardpräfix für Befehle, die aus diesem Modul exportiert werden. Das Standardpräfix kann mit "Import-Module -Prefix" überschrieben werden.
+# Standardprï¿½fix fï¿½r Befehle, die aus diesem Modul exportiert werden. Das Standardprï¿½fix kann mit "Import-Module -Prefix" ï¿½berschrieben werden.
 # DefaultCommandPrefix = ''
 
 }

@@ -10,18 +10,18 @@ Get-NewAndRemovedVMs
 NAME
     Get-NewAndRemovedVMs
     
-SYNOPSIS
+ÜBERSICHT
     
     
 SYNTAX
     Get-NewAndRemovedVMs [-ClusterName] <String> [[-Summary]] [[-Days] <String>] [<CommonParameters>]
     
     
-DESCRIPTION
+BESCHREIBUNG
     This Function report newly created and deleted VMs by Cluster.
     
 
-PARAMETERS
+PARAMETER
     -ClusterName <String>
         Name or Wildcard of your vSphere Cluster Name(s) to report.
         
@@ -31,12 +31,12 @@ PARAMETERS
     -Days <String>
         
     <CommonParameters>
-        This cmdlet supports the common parameters: Verbose, Debug,
+        Dieses Cmdlet unterstützt folgende allgemeine Parameter: Verbose, Debug,
         ErrorAction, ErrorVariable, WarningAction, WarningVariable,
-        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
-        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        OutBuffer, PipelineVariable und OutVariable. Weitere Informationen finden Sie unter 
+        "about_CommonParameters" (https:/go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- EXAMPLE 1 --------------------------
+    -------------------------- BEISPIEL 1 --------------------------
     
     PS C:\>Get-NewAndRemovedVMs -ClusterName Cluster* | ft -AutoSize
     
@@ -45,7 +45,7 @@ PARAMETERS
     
     
     
-    -------------------------- EXAMPLE 2 --------------------------
+    -------------------------- BEISPIEL 2 --------------------------
     
     PS C:\>Get-NewAndRemovedVMs -ClusterName Cluster01 -Days 90
     
@@ -54,7 +54,7 @@ PARAMETERS
     
     
     
-    -------------------------- EXAMPLE 3 --------------------------
+    -------------------------- BEISPIEL 3 --------------------------
     
     PS C:\>Get-NewAndRemovedVMs -ClusterName * -Days 90 -Summary
     
@@ -63,10 +63,10 @@ PARAMETERS
     
     
     
-REMARKS
-    To see the examples, type: "get-help Get-NewAndRemovedVMs -examples".
-    For more information, type: "get-help Get-NewAndRemovedVMs -detailed".
-    For technical information, type: "get-help Get-NewAndRemovedVMs -full".
+HINWEISE
+    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Get-NewAndRemovedVMs -examples".
+    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Get-NewAndRemovedVMs -detailed".
+    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Get-NewAndRemovedVMs -full".
 
 
 Get-NewVMs
@@ -75,30 +75,30 @@ Get-NewVMs
 NAME
     Get-NewVMs
     
-SYNOPSIS
+ÜBERSICHT
     
     
 SYNTAX
     Get-NewVMs [-ClusterName] <Object> [[-Days] <String>] [<CommonParameters>]
     
     
-DESCRIPTION
+BESCHREIBUNG
     This Function report newly created VMs by Cluster.
     
 
-PARAMETERS
+PARAMETER
     -ClusterName <Object>
         List or Wildcard of your vSphere Cluser Names to process.
         
     -Days <String>
         
     <CommonParameters>
-        This cmdlet supports the common parameters: Verbose, Debug,
+        Dieses Cmdlet unterstützt folgende allgemeine Parameter: Verbose, Debug,
         ErrorAction, ErrorVariable, WarningAction, WarningVariable,
-        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
-        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        OutBuffer, PipelineVariable und OutVariable. Weitere Informationen finden Sie unter 
+        "about_CommonParameters" (https:/go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- EXAMPLE 1 --------------------------
+    -------------------------- BEISPIEL 1 --------------------------
     
     PS C:\>Get-NewVMs -ClusterName Cluster* | ft -AutoSize
     
@@ -107,7 +107,7 @@ PARAMETERS
     
     
     
-    -------------------------- EXAMPLE 2 --------------------------
+    -------------------------- BEISPIEL 2 --------------------------
     
     PS C:\>Get-NewVMs -ClusterName Cluster01
     
@@ -116,7 +116,7 @@ PARAMETERS
     
     
     
-    -------------------------- EXAMPLE 3 --------------------------
+    -------------------------- BEISPIEL 3 --------------------------
     
     PS C:\>Get-NewVMs -ClusterName Cluster01, Cluster02 -Days 60 | ft -AutoSize
     
@@ -125,10 +125,10 @@ PARAMETERS
     
     
     
-REMARKS
-    To see the examples, type: "get-help Get-NewVMs -examples".
-    For more information, type: "get-help Get-NewVMs -detailed".
-    For technical information, type: "get-help Get-NewVMs -full".
+HINWEISE
+    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Get-NewVMs -examples".
+    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Get-NewVMs -detailed".
+    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Get-NewVMs -full".
 
 
 Get-NICDetails
@@ -137,18 +137,18 @@ Get-NICDetails
 NAME
     Get-NICDetails
     
-SYNOPSIS
+ÜBERSICHT
     
     
 SYNTAX
     Get-NICDetails [-Clustername] <String> [<CommonParameters>]
     
     
-DESCRIPTION
+BESCHREIBUNG
     Reports Firmware and Driver Details for your ESXi vmnics.
     
 
-PARAMETERS
+PARAMETER
     -Clustername <String>
         Name or Wildcard of your vSphere Cluster Name to process.
         
@@ -157,12 +157,12 @@ PARAMETERS
         #Requires -Modules VMware.VimAutomation.Core, @{ModuleName="VMware.VimAutomation.Core";ModuleVersion="6.3.0.0"}
         
     <CommonParameters>
-        This cmdlet supports the common parameters: Verbose, Debug,
+        Dieses Cmdlet unterstützt folgende allgemeine Parameter: Verbose, Debug,
         ErrorAction, ErrorVariable, WarningAction, WarningVariable,
-        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
-        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        OutBuffer, PipelineVariable und OutVariable. Weitere Informationen finden Sie unter 
+        "about_CommonParameters" (https:/go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- EXAMPLE 1 --------------------------
+    -------------------------- BEISPIEL 1 --------------------------
     
     PS C:\>Get-NICDetails -Clustername *
     
@@ -171,10 +171,10 @@ PARAMETERS
     
     
     
-REMARKS
-    To see the examples, type: "get-help Get-NICDetails -examples".
-    For more information, type: "get-help Get-NICDetails -detailed".
-    For technical information, type: "get-help Get-NICDetails -full".
+HINWEISE
+    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Get-NICDetails -examples".
+    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Get-NICDetails -detailed".
+    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Get-NICDetails -full".
 
 
 Get-UplinkDetails
@@ -183,18 +183,18 @@ Get-UplinkDetails
 NAME
     Get-UplinkDetails
     
-SYNOPSIS
+ÜBERSICHT
     
     
 SYNTAX
     Get-UplinkDetails [-Clustername] <String> [<CommonParameters>]
     
     
-DESCRIPTION
+BESCHREIBUNG
     This Function collects detailed informations about your ESXi Host connections to pSwitch and DVS / vSwitch
     
 
-PARAMETERS
+PARAMETER
     -Clustername <String>
         Your vSphere Cluster Name or Wildcard
         
@@ -203,12 +203,12 @@ PARAMETERS
         #Requires -Modules VMware.VimAutomation.Core, @{ModuleName="VMware.VimAutomation.Core";ModuleVersion="6.3.0.0"}
         
     <CommonParameters>
-        This cmdlet supports the common parameters: Verbose, Debug,
+        Dieses Cmdlet unterstützt folgende allgemeine Parameter: Verbose, Debug,
         ErrorAction, ErrorVariable, WarningAction, WarningVariable,
-        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
-        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        OutBuffer, PipelineVariable und OutVariable. Weitere Informationen finden Sie unter 
+        "about_CommonParameters" (https:/go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- EXAMPLE 1 --------------------------
+    -------------------------- BEISPIEL 1 --------------------------
     
     PS C:\>Get-UplinkDetails -Clustername * | ft -AutoSize
     
@@ -217,7 +217,7 @@ PARAMETERS
     
     
     
-    -------------------------- EXAMPLE 2 --------------------------
+    -------------------------- BEISPIEL 2 --------------------------
     
     PS C:\>Get-UplinkDetails -Clustername MyCluster001 | ft -AutoSize
     
@@ -226,7 +226,7 @@ PARAMETERS
     
     
     
-    -------------------------- EXAMPLE 3 --------------------------
+    -------------------------- BEISPIEL 3 --------------------------
     
     PS C:\>Get-UplinkDetails -Clustername MyCluster* | Sort Clustername, Hostname, DVS | ft -AutoSize
     
@@ -235,10 +235,10 @@ PARAMETERS
     
     
     
-REMARKS
-    To see the examples, type: "get-help Get-UplinkDetails -examples".
-    For more information, type: "get-help Get-UplinkDetails -detailed".
-    For technical information, type: "get-help Get-UplinkDetails -full".
+HINWEISE
+    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Get-UplinkDetails -examples".
+    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Get-UplinkDetails -detailed".
+    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Get-UplinkDetails -full".
 
 
 Get-VMDisk
@@ -247,36 +247,35 @@ Get-VMDisk
 NAME
     Get-VMDisk
     
-SYNOPSIS
+ÜBERSICHT
     
     
 SYNTAX
     Get-VMDisk [-myVMs] <InventoryItemImpl[]> [<CommonParameters>]
     
     
-DESCRIPTION
+BESCHREIBUNG
     This Function reports VM vDisks and Datastores:
     
-    Name    PowerState Datastore     VMDK                       StorageFormat CapacityGB
-    ----    ---------- ---------     ----                       ------------- ----------
-    TST0003 PoweredOff DS02         TST0003/TST0003.vmdk           Thick         16
-    TST0004 PoweredOff DS02         TST0004/TST0004.vmdk           Thick         16
-    TST0004 PoweredOff DS02         TST0004/TST0004_1.vmdk         Thick          1
-    TST0001  PoweredOn DS02         TST0001/TST0001.vmdk           Thick         16
-    TST0039 PoweredOff DS02         TST0039/TST0039.vmdk           Thick         60
-    TST0002  PoweredOn DS02         TST0002/TST0002.vmdk           Thick         16
+    Get-VM MyTest | Get-VMDisk | Format-Table -AutoSize
+    
+    Name   PowerState Datastore Path                  Disk        StorageFormat CapacityGB Controller Unit
+    ----   ---------- --------- ----                  ----        ------------- ---------- ---------- ----
+    MyTest PoweredOff data01     MyTest/MyTest.vmdk   Hard disk 1          Thin         16          0    0
+    MyTest PoweredOff data02     MyTest/MyTest_1.vmdk Hard disk 2          Thin         20          1    0
+    MyTest PoweredOff data01     MyTest/MyTest_2.vmdk Hard disk 3         Thick         20          1    1
     
 
-PARAMETERS
+PARAMETER
     -myVMs <InventoryItemImpl[]>
         
     <CommonParameters>
-        This cmdlet supports the common parameters: Verbose, Debug,
+        Dieses Cmdlet unterstützt folgende allgemeine Parameter: Verbose, Debug,
         ErrorAction, ErrorVariable, WarningAction, WarningVariable,
-        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
-        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        OutBuffer, PipelineVariable und OutVariable. Weitere Informationen finden Sie unter 
+        "about_CommonParameters" (https:/go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- EXAMPLE 1 --------------------------
+    -------------------------- BEISPIEL 1 --------------------------
     
     PS C:\>Get-VM -Name TST* | Get-VMDisk
     
@@ -285,20 +284,91 @@ PARAMETERS
     
     
     
-    -------------------------- EXAMPLE 2 --------------------------
+    -------------------------- BEISPIEL 2 --------------------------
     
     PS C:\>Get-Folder -Name TST | Get-VM | Get-VMDisk | ft -AutoSize
     
-    #Requires PS -Version 4.0
+    #Requires PS -Version 5.0
     #Requires -Modules VMware.VimAutomation.Core, @{ModuleName="VMware.VimAutomation.Core";ModuleVersion="6.3.0.0"}
     
     
     
     
-REMARKS
-    To see the examples, type: "get-help Get-VMDisk -examples".
-    For more information, type: "get-help Get-VMDisk -detailed".
-    For technical information, type: "get-help Get-VMDisk -full".
+HINWEISE
+    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Get-VMDisk -examples".
+    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Get-VMDisk -detailed".
+    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Get-VMDisk -full".
+
+
+Get-VMHostUplinkDetails
+-------------------------
+
+NAME
+    Get-VMHostUplinkDetails
+    
+ÜBERSICHT
+    
+    
+SYNTAX
+    Get-VMHostUplinkDetails [-VMHost] <VMHost[]> [-Type] <String> [<CommonParameters>]
+    
+    
+BESCHREIBUNG
+    This Function collects detailed informations about your ESXi Host connections to pSwitch and VDS / vSwitch. 
+    LLDP Informations might only be available when uplinks are connected to a VDS.
+    
+
+PARAMETER
+    -VMHost <VMHost[]>
+        
+    -Type <String>
+        
+    <CommonParameters>
+        Dieses Cmdlet unterstützt folgende allgemeine Parameter: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable und OutVariable. Weitere Informationen finden Sie unter 
+        "about_CommonParameters" (https:/go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    -------------------------- BEISPIEL 1 --------------------------
+    
+    PS C:\>Get-VMHost -Name MyHost | Get-VMHostUplinkDetails -Type LLDP | Where-Object {$_.VDS -ne "-No Backing-"}  | Format-Table -AutoSize
+    
+    
+    
+    
+    
+    
+    -------------------------- BEISPIEL 2 --------------------------
+    
+    PS C:\>Get-VMHost -Name MyHost | Get-VMHostUplinkDetails -Type CDP | Where-Object {$_.VDS -ne "-No Backing-"}  | Sort-Object ClusterName, HostName, vmnic | Format-Table -AutoSize
+    
+    
+    
+    
+    
+    
+    -------------------------- BEISPIEL 3 --------------------------
+    
+    PS C:\>Get-Cluster -Name MyCluster | Get-VMHost | Get-VMHostUplinkDetails -Type LLDP | Format-Table -AutoSize
+    
+    
+    
+    
+    
+    
+    -------------------------- BEISPIEL 4 --------------------------
+    
+    PS C:\>Get-Cluster -Name MyCluster | Get-VMHost | Get-VMHostUplinkDetails -Type CDP | Format-Table -AutoSize
+    
+    
+    
+    
+    
+    
+HINWEISE
+    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Get-VMHostUplinkDetails -examples".
+    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Get-VMHostUplinkDetails -detailed".
+    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Get-VMHostUplinkDetails -full".
 
 
 Get-VMID
@@ -307,27 +377,27 @@ Get-VMID
 NAME
     Get-VMID
     
-SYNOPSIS
+ÜBERSICHT
     
     
 SYNTAX
     Get-VMID [-myVMs] <InventoryItemImpl[]> [<CommonParameters>]
     
     
-DESCRIPTION
+BESCHREIBUNG
     This Function reports all VM IDs
     
 
-PARAMETERS
+PARAMETER
     -myVMs <InventoryItemImpl[]>
         
     <CommonParameters>
-        This cmdlet supports the common parameters: Verbose, Debug,
+        Dieses Cmdlet unterstützt folgende allgemeine Parameter: Verbose, Debug,
         ErrorAction, ErrorVariable, WarningAction, WarningVariable,
-        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
-        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        OutBuffer, PipelineVariable und OutVariable. Weitere Informationen finden Sie unter 
+        "about_CommonParameters" (https:/go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- EXAMPLE 1 --------------------------
+    -------------------------- BEISPIEL 1 --------------------------
     
     PS C:\>Get-VM -Name TST* | Get-VMID
     
@@ -336,7 +406,7 @@ PARAMETERS
     
     
     
-    -------------------------- EXAMPLE 2 --------------------------
+    -------------------------- BEISPIEL 2 --------------------------
     
     PS C:\>Get-Folder -Name TST | Get-VM | Get-VMID | ft -AutoSize
     
@@ -346,10 +416,10 @@ PARAMETERS
     
     
     
-REMARKS
-    To see the examples, type: "get-help Get-VMID -examples".
-    For more information, type: "get-help Get-VMID -detailed".
-    For technical information, type: "get-help Get-VMID -full".
+HINWEISE
+    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Get-VMID -examples".
+    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Get-VMID -detailed".
+    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Get-VMID -full".
 
 
 Get-VMmaxIOPS
@@ -358,18 +428,18 @@ Get-VMmaxIOPS
 NAME
     Get-VMmaxIOPS
     
-SYNOPSIS
+ÜBERSICHT
     
     
 SYNTAX
     Get-VMmaxIOPS [-VMs] <InventoryItemImpl[]> [[-Minutes] <Int32>] [<CommonParameters>]
     
     
-DESCRIPTION
+BESCHREIBUNG
     This Function will Create a VM Disk IOPS Report
     
 
-PARAMETERS
+PARAMETER
     -VMs <InventoryItemImpl[]>
         Specify the VMs
         
@@ -381,12 +451,12 @@ PARAMETERS
         #Requires -Modules VMware.VimAutomation.Core, @{ModuleName="VMware.VimAutomation.Core";ModuleVersion="6.3.0.0"}
         
     <CommonParameters>
-        This cmdlet supports the common parameters: Verbose, Debug,
+        Dieses Cmdlet unterstützt folgende allgemeine Parameter: Verbose, Debug,
         ErrorAction, ErrorVariable, WarningAction, WarningVariable,
-        OutBuffer, PipelineVariable, and OutVariable. For more information, see 
-        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
+        OutBuffer, PipelineVariable und OutVariable. Weitere Informationen finden Sie unter 
+        "about_CommonParameters" (https:/go.microsoft.com/fwlink/?LinkID=113216). 
     
-    -------------------------- EXAMPLE 1 --------------------------
+    -------------------------- BEISPIEL 1 --------------------------
     
     PS C:\>Get-Folder -Name TST | Get-VM | where {$_.PowerState -eq "PoweredOn"} | Get-VMmaxIOPS -Minutes 120 | ft -AutoSize
     
@@ -395,7 +465,7 @@ PARAMETERS
     
     
     
-    -------------------------- EXAMPLE 2 --------------------------
+    -------------------------- BEISPIEL 2 --------------------------
     
     PS C:\>Get-Cluster -Name TST | Get-VM | where {$_.PowerState -eq "PoweredOn"} | Get-VMmaxIOPS
     
@@ -404,7 +474,7 @@ PARAMETERS
     
     
     
-    -------------------------- EXAMPLE 3 --------------------------
+    -------------------------- BEISPIEL 3 --------------------------
     
     PS C:\>Get-VM -Name TST*| where {$_.PowerState -eq "PoweredOn"} | Get-VMmaxIOPS -Minutes 120 | ft -AutoSize
     
@@ -413,10 +483,10 @@ PARAMETERS
     
     
     
-REMARKS
-    To see the examples, type: "get-help Get-VMmaxIOPS -examples".
-    For more information, type: "get-help Get-VMmaxIOPS -detailed".
-    For technical information, type: "get-help Get-VMmaxIOPS -full".
+HINWEISE
+    Zum Aufrufen der Beispiele geben Sie Folgendes ein: "get-help Get-VMmaxIOPS -examples".
+    Weitere Informationen erhalten Sie mit folgendem Befehl: "get-help Get-VMmaxIOPS -detailed".
+    Technische Informationen erhalten Sie mit folgendem Befehl: "get-help Get-VMmaxIOPS -full".
 
 
 
